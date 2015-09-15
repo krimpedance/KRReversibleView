@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="KRReversibleViewDEMO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8v-Dn-qXU" customClass="KRReversibleView" customModule="KRReversibleViewDEMO" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="288" height="288"/>
+                                <color key="backgroundColor" red="0.791067294973545" green="0.791067294973545" blue="0.791067294973545" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="17f-6d-BW9"/>
+                                    <constraint firstAttribute="height" constant="288" id="NNe-25-D7n"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isFront" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="myRect">
+                                        <rect key="value" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LLM-ee-XwW">
+                                <rect key="frame" x="35" y="360" width="250" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="246" id="HW9-oB-uTD"/>
+                                </constraints>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRn-zF-kFE">
+                                <rect key="frame" x="55" y="500" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jn1-Ub-W3g"/>
+                                    <constraint firstAttribute="width" constant="50" id="WBW-ob-1NM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="←">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="rightLeftBtnTaped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9sf-Ig-3hd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKE-Ov-QV5">
+                                <rect key="frame" x="135" y="500" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1dz-hi-Ao5"/>
+                                    <constraint firstAttribute="height" constant="50" id="Tb7-la-TOC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="↓">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="topBottomBtnTaped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tca-WG-het"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZA-EG-orK">
+                                <rect key="frame" x="215" y="500" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Ikm-eU-q1q"/>
+                                    <constraint firstAttribute="height" constant="50" id="fAC-S8-0Om"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="→">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="leftRightBtnTaped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IyF-1n-Zni"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWb-mG-Ojj">
+                                <rect key="frame" x="135" y="420" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gcV-oW-CdH"/>
+                                    <constraint firstAttribute="width" constant="50" id="oVr-Dk-L6v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="↑">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="bottomTopBtnTaped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3qq-i5-AHA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m8v-Dn-qXU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="60k-mN-H7f"/>
+                            <constraint firstItem="TZA-EG-orK" firstAttribute="leading" secondItem="eKE-Ov-QV5" secondAttribute="trailing" constant="30" id="6S0-Sr-Jv1"/>
+                            <constraint firstItem="TZA-EG-orK" firstAttribute="top" secondItem="LLM-ee-XwW" secondAttribute="bottom" constant="110" id="KVr-uD-bph"/>
+                            <constraint firstAttribute="centerX" secondItem="LLM-ee-XwW" secondAttribute="centerX" id="YRE-vI-EGu"/>
+                            <constraint firstAttribute="centerX" secondItem="eKE-Ov-QV5" secondAttribute="centerX" id="aJX-E6-SGy"/>
+                            <constraint firstAttribute="centerX" secondItem="OWb-mG-Ojj" secondAttribute="centerX" id="cum-SI-XjP"/>
+                            <constraint firstItem="vRn-zF-kFE" firstAttribute="top" secondItem="LLM-ee-XwW" secondAttribute="bottom" constant="110" id="kFd-t0-jYN"/>
+                            <constraint firstAttribute="centerX" secondItem="m8v-Dn-qXU" secondAttribute="centerX" id="lIK-Fz-zLl"/>
+                            <constraint firstItem="OWb-mG-Ojj" firstAttribute="top" secondItem="LLM-ee-XwW" secondAttribute="bottom" constant="30" id="lJA-b6-xGz"/>
+                            <constraint firstItem="eKE-Ov-QV5" firstAttribute="leading" secondItem="vRn-zF-kFE" secondAttribute="trailing" constant="30" id="meG-yy-vnP"/>
+                            <constraint firstItem="eKE-Ov-QV5" firstAttribute="top" secondItem="OWb-mG-Ojj" secondAttribute="bottom" constant="30" id="nVz-Ns-TW2"/>
+                            <constraint firstItem="LLM-ee-XwW" firstAttribute="top" secondItem="m8v-Dn-qXU" secondAttribute="bottom" constant="44" id="uGA-cQ-Fom"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="durationSlider" destination="LLM-ee-XwW" id="VFz-Yf-bbR"/>
+                        <outlet property="reversibleView" destination="m8v-Dn-qXU" id="mh1-At-l70"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202" y="310"/>
+        </scene>
+    </scenes>
+</document>
