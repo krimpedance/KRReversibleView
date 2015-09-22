@@ -1,4 +1,4 @@
-# (Swift) KRReversibleView v1.0
+# (Swift2.0) KRReversibleView v1.0
 KRReversibleViewは，その名の通り裏表のあるビューを作成し，イベントによって反転します．
 裏表のそれぞれのビューを作成するだけで，簡単に実現することができます．
 
